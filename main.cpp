@@ -9,8 +9,7 @@
 
 using namespace std;
 
-class MasterIndex
-{
+class MasterIndex {
 public:
     pair<uint64_t, uint64_t> index;
     vector<pair<uint64_t, uint64_t>> index_array;
@@ -23,8 +22,7 @@ public:
     }
 };
 
-MasterIndex* get_master_index(GDALRasterBand *band, float value = 0.0f)
-{
+MasterIndex* get_master_index(GDALRasterBand *band, float value = 0.0f) {
     MasterIndex *master_index = new MasterIndex;
     int nrows, ncols;
     double nodata;
@@ -52,8 +50,7 @@ MasterIndex* get_master_index(GDALRasterBand *band, float value = 0.0f)
     return master_index;
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     GDALDataset *in_ds;
     GDALAllRegister();
     in_ds = (GDALDataset *)GDALOpen(argv[1], GA_ReadOnly);
