@@ -14,8 +14,7 @@ public:
     pair<uint64_t, uint64_t> index;
     vector<pair<uint64_t, uint64_t>> index_array;
 
-    void show_indices()
-    {
+    void show_indices() {
         for (auto iter : index_array) {
             cout << iter.first << " " << iter.second << endl;
         }
