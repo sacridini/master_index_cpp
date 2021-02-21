@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 {
     GDALDataset *in_ds;
     GDALAllRegister();
-    in_ds = (GDALDataset *)GDALOpen("C:\\Users\\eduardo\\Documents\\restante_2017_carbono_ton_ha_70km.tif", GA_ReadOnly);
+    in_ds = (GDALDataset *)GDALOpen(argv[1], GA_ReadOnly);
 
     MasterIndex *master_index = get_master_index(in_ds->GetRasterBand(1));
     master_index->show_indices();
